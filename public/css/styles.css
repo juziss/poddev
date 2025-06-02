@@ -1,6 +1,102 @@
-* {
+body, p, span, li, a, button, input, label {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4, h5, h6, .logo-title {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2d3250;
+  color: #fff;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400; 
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f8b179; 
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 220px;
+  padding: 8px 30px 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #fff; 
+  background-color: transparent;
+  color: #fff;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #f8b179;
+}
+
+.search-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #676f9d;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #f8b179;
+  color: #2d3250;
+  font-weight: 500;
 }
