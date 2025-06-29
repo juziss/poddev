@@ -1,36 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EpisodeController;
 
-Route::get('/', function () {
+//home
+Route::get('/', [EpisodeController::class, 'home'])->name('home');
+ 
+//lista de eps
+Route::get('/episodios', [EpisodeController::class, 'index'])->name('episodes.index');
 
-    $nome = 'Matheus';
-    $idade = 29;
+//ep em especifico
+Route::get('/episodio/{episode:slug}', [EpisodeController::class, 'show'])->name('episodes.show');
 
-    $arr = [1,2,3,4,5];
+//eps por categoria
+Route::get('/categoria/{category:slug}', [EpisodeController::class, 'byCategory'])->name('episodes.category');
 
-    $nomes = ["taylor", "julia", "luiz", "paty"];
-    
-    return view('welcome', 
-    [
-        'nome' => $nome,
-        'idade' => $idade,
-        'profissao' => "programador",
-        'arr' => $arr,
-        'nomes' => $nomes
-    ]);
-});
+//eps por tag
+Route::get('/tag/{tag:slug}', [EpisodeController::class, 'byTag'])->name('episodes.tag');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/episodios', function () {
-
-    $busca = request('search');
-    return view('episodes', ['busca' => $busca]);
-});
-
-Route::get('/episodio/{id}', function ($id) {
-    return view('episode', ['id' => $id]);
-});
+//ROTAS ESTÁTICAS
+Route::view('/sobre', 'pages.about')->name('about');
+Route::view('/contato', 'pages.contact')->name('contact');
