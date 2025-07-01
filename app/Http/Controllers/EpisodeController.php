@@ -14,7 +14,7 @@ class EpisodeController extends Controller
     public function index(Request $request)
     {
         //inicia a query dos eps publicados
-        $query = Episode::publised()
+        $query = Episode::published()
                         ->with(['category', 'tags', 'user'])
                         ->latest(); //ordena por + recente
         
@@ -101,7 +101,7 @@ class EpisodeController extends Controller
                                     ->when($featuredEpisode, function($q) use ($featuredEpisode){
                                         $q->where('id', '!=', $featuredEpisode->id);
                                     })
-                                    ->lastest()
+                                    ->latest()
                                     ->limit(6)
                                     ->get();
 
