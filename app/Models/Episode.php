@@ -55,10 +55,10 @@ class Episode extends Model
     }
 
     //pertence a varias tags n:n
-    public function tag()
+    public function tags()
     {
         return $this->belongsToMany(Tag::class, 'episode_tag')
-                    ->withTimestamps();
+                ->withTimestamps();
     }
 
     //MUTATORS
