@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //um usuário pode ter vários eps
+    public function episodes()
+    {
+        return $this->hasMany(Episode::class);
+    }
 }
