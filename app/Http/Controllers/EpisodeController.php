@@ -33,9 +33,11 @@ class EpisodeController extends Controller
             $query->byCategory($request->get('category'));
         }
 
-        //fltro por tag
+        // Filtro por tag
         if ($request->filled('tag')){
-            $query->byCategory($request->get('category'));
+            $query->whereHas('tags', function($q) use ($request) {
+                $q->where('slug', $request->get('tag'));
+            });
         }
 
         //paginação (com 13 eps por pag)
@@ -84,7 +86,7 @@ class EpisodeController extends Controller
                                     ->limit(4)
                                     ->get();
         
-        return view('episode.show', compact('episode', 'relatedEpisode'));
+        return view('episodes.show', compact('episode', 'relatedEpisodes'));
     }
 
     //PAGINA INICIAL -> eps em destaque
@@ -138,6 +140,6 @@ class EpisodeController extends Controller
                         ->latest()
                         ->paginate(12);
         
-        return view('episodes.by-tag', compact('tag', 'episode'));
+        return view('episodes.by-tag', compact('tag', 'episodes'));
     }
 }
