@@ -5,7 +5,7 @@
 @section('content')
 
     <p>
-        exibindo produto id: {{$id}}
+        exibindo ep id: {{$id}}
     </p>    
 
 @endsection
