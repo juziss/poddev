@@ -45,16 +45,16 @@
 
     @yield('content')
 
-    <footer>
-        <div>
-            <img src="/public/img/poddev_logo.png" alt="logo poddev">
-            <p>poddev</p>
-        </div>
-        <div>
-            <p>Ouça em</p>
-            <img src="" alt="logo spotify">
-            <img src="" alt="logo youtube">
-            <img src="" alt="logo google podcasts">
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="footer-copyright">
+                    © {{ date('Y') }} PODDEV. Todos os direitos reservados.
+                </p>
+                <p class="footer-credits">
+                    Desenvolvido com ❤️ por <strong>Julia Coutinho</strong>
+                </p>
+            </div>
         </div>
     </footer>
 </body>
