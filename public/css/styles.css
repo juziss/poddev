@@ -3,6 +3,10 @@ body, p, span, li, a, button, input, label {
   font-optical-sizing: auto;
 }
 
+body {
+  margin-bottom: 0;
+}
+
 h1, h2, h3, h4, h5, h6, .logo-title {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -160,4 +164,73 @@ button:hover {
   background-color: #f8b179;
   color: #2d3250;
   font-weight: 500;
+}
+
+/* =================================
+   FOOTER STYLES - Versão Simplificada
+   ================================= */
+
+.main-footer {
+    background: linear-gradient(135deg, #2d3250 0%, #424769 50%, #676f9d 100%);
+    color: white;
+    margin-top: 60px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.footer-bottom {
+    padding: 30px 0;
+    width: 100%;
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-copyright,
+.footer-credits {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.footer-credits strong {
+    color: #f8b179;
+    font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .footer-copyright,
+    .footer-credits {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-bottom {
+        padding: 20px 0;
+    }
+    
+    .footer-bottom-content {
+        padding: 0 15px;
+    }
 }
