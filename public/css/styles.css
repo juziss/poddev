@@ -10,17 +10,78 @@ h1, h2, h3, h4, h5, h6, .logo-title {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #2d3250;
-  color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0px 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-left {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #f8b179;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #f8b179 !important;
+    transform: translateY(-2px); 
+}
+
+.nav-links a {
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a,
+.navbar p,
+.navbar button {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo-title {
+    color: white !important;
 }
 
 .logo {
