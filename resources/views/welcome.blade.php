@@ -9,6 +9,19 @@
 @section('content')
 <div class="home-container">
     
+    {{-- Banner --}}
+    <section class="banner-section">
+    <p>esse é o</p>
+    <h1>PODDEV</h1>
+    <p>Uma mesa. Várias ideias. </p>
+    <div>
+        <p>Disponível em</p>
+        <a href="https://open.spotify.com/"><img src="{{ asset('img/spotify.svg') }}" alt="Ícone Spotify"></a>
+        <a href="https://www.youtube.com/"><img src="{{ asset('img/youtube.svg') }}" alt="Ícone Youtube"></a>
+        <a href="https://podcasts.apple.com/br/browse"><img src="{{ asset('img/applepodcasts.svg') }}" alt="Ícone Apple Podcasts"></a>
+    </div>
+    </section>
+    
     {{-- Episódio em Destaque --}}
     @if($featuredEpisode)
     <section class="featured-section">
