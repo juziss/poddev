@@ -1,0 +1,446 @@
+/* =================================
+   WELCOME PAGE STYLES
+   ================================= */
+
+.home-container {
+    padding: 0; 
+}
+
+.banner-section {
+    width: 100vw;
+    height: 100vh;
+    margin-left: calc(-50vw + 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -80px;
+    padding-top: 80px;
+    color: white;
+    z-index: 2;
+}
+
+.banner-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/banner-pic.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) blur(2px);
+    z-index: 1;
+}
+
+.banner-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.banner-section > * {
+    position: relative;
+    z-index: 3;
+}
+
+.banner-section h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.banner-section p {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+}
+
+.banner-section div {
+    margin-top: 30px;
+}
+
+/* Ícones com hover para cor original */
+.banner-section img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1); /* Branco por padrão */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.banner-section img:hover {
+    filter: none; /* Cor laranja original */
+    transform: scale(1.1);
+}
+
+/* Outras seções */
+.featured-section,
+.latest-section,
+.categories-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-section,
+.latest-section,
+.categories-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.banner-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-section h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.banner-section p {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    margin: 10px 0;
+}
+
+.banner-section div {
+    margin-top: 30px;
+}
+
+.banner-section img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1);
+}
+
+/* =================================
+   CORES DAS CATEGORIAS
+   ================================= */
+.category-1 { background-color: #3b82f6 !important; } /* Frontend - Azul */
+.category-2 { background-color: #ef4444 !important; } /* Backend - Vermelho */
+.category-3 { background-color: #10b981 !important; } /* DevOps - Verde */
+.category-4 { background-color: #8b5cf6 !important; } /* Mobile - Roxo */
+.category-5 { background-color: #f59e0b !important; } /* Carreira - Amarelo */
+
+/* =================================
+   EPISÓDIO EM DESTAQUE
+   ================================= */
+.featured-section {
+    margin-bottom: 60px;
+}
+
+.featured-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2d3250;
+}
+
+.featured-card {
+    background: linear-gradient(135deg, #2d3250 0%, #676f9d 100%);
+    padding: 40px;
+    border-radius: 12px;
+    color: white;
+}
+
+.featured-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.featured-text {
+    flex: 1;
+}
+
+.featured-category {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.featured-episode-title {
+    font-size: 1.8rem;
+    margin: 15px 0 10px;
+    line-height: 1.3;
+}
+
+.featured-description {
+    margin-bottom: 20px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.featured-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    white-space: nowrap;
+}
+
+.featured-button {
+    background: #f8b179;
+    color: #2d3250;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.featured-button:hover {
+    transform: translateY(-2px);
+}
+
+.featured-thumbnail {
+    flex-shrink: 0;
+}
+
+.featured-thumbnail img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* =================================
+   ÚLTIMOS EPISÓDIOS
+   ================================= */
+.latest-section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2d3250;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.episode-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    transition: all 0.2s;
+}
+
+.episode-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.episode-category {
+    margin-bottom: 12px;
+}
+
+.category-badge {
+    color: white;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.episode-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.episode-title a {
+    color: #2d3250;
+    text-decoration: none;
+}
+
+.episode-description {
+    color: #6b7280;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.episode-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.episode-tags {
+    margin-top: 12px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    background: #f3f4f6;
+    color: #6b7280;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+}
+
+.view-all-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-primary {
+    background: #2d3250;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: #676f9d;
+    transform: translateY(-1px);
+}
+
+/* =================================
+   CATEGORIAS
+   ================================= */
+.categories-section {
+    margin-bottom: 40px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.category-item {
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.category-item:hover {
+    transform: translateY(-4px);
+}
+
+.category-name {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.category-description {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.category-count {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 20px 15px;
+    }
+    
+    .featured-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .featured-episode-title {
+        font-size: 1.5rem;
+    }
+    
+    .featured-meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title,
+    .featured-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-card {
+        padding: 25px;
+    }
+    
+    .episode-card {
+        padding: 15px;
+    }
+    
+    .featured-episode-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title,
+    .featured-title {
+        font-size: 1.5rem;
+    }
+}
