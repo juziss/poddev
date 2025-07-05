@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    @stack('styles')
     <script src="{{ asset('js/scripts.js') }}"></script>
 </head>
 
