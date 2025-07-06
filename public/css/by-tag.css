@@ -1,0 +1,126 @@
+/* =================================
+   BY TAG PAGE STYLES
+   ================================= */
+
+.tag-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 30px 0 40px;
+}
+
+.tag-badge-large {
+    display: inline-block;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.tag-title {
+    font-size: 2.5rem;
+    color: #2d3250;
+    margin-bottom: 15px;
+}
+
+.tag-description {
+    color: #6b7280;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.tag-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tag-stats .stat-item {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.tag-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: sticky;
+    top: 120px;
+}
+
+.tag-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tag-meta .meta-item strong {
+    display: block;
+    color: #2d3250;
+    font-size: 1.2rem;
+}
+
+.tag-meta .meta-item span {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.tag-categories h5 {
+    color: #2d3250;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.related-tags-description {
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.view-all-tags {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-secondary {
+    background: #f3f4f6;
+    color: #4b5563;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+    color: #2d3250;
+}
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+@media (max-width: 768px) {
+    .episodes-main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tag-sidebar {
+        position: static;
+    }
+    
+    .tag-title {
+        font-size: 2rem;
+    }
+    
+    .tag-meta {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
