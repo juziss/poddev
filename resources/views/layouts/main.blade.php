@@ -25,9 +25,9 @@
                     <p class="logo-title">PODDEV</p>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Episódios</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/episodios">Episódios</a></li>
+                    <li><a href="/contato">Contato</a></li>
                 </ul>
             </div>
 

@@ -39,9 +39,9 @@ return new class extends Migration
             $table->timestamp('published_at')->nullable();
             
             // Estatísticas
-            $table->integer('views_count')->default(0);
-            $table->integer('likes_count')->default(0);
-            $table->integer('downloads_count')->default(0);
+            // $table->integer('views_count')->default(0);
+            // $table->integer('likes_count')->default(0);
+            // $table->integer('downloads_count')->default(0);
             
             // SEO
             $table->string('meta_title')->nullable();

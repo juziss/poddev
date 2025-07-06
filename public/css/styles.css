@@ -5,6 +5,7 @@ body, p, span, li, a, button, input, label {
 
 body {
   margin-bottom: 0;
+  background-color: #f3f3f3;
 }
 
 h1, h2, h3, h4, h5, h6, .logo-title {
