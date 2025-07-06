@@ -1,0 +1,356 @@
+/* =================================
+   EPISODES PAGE STYLES
+   ================================= */
+
+.episodes-container {
+    max-width: 1200px;
+    margin: 100px auto 0; /* Espaço para navbar fixa */
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+}
+
+/* =================================
+   HEADER DA PÁGINA
+   ================================= */
+.episodes-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #2d3250;
+    margin-bottom: 10px;
+}
+
+.page-description {
+    color: #6b7280;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =================================
+   BUSCA E FILTROS
+   ================================= */
+.search-filter-section {
+    grid-column: 1 / -1;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-input-group {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 50px 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #676f9d;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #676f9d;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #f8b179;
+}
+
+.search-btn img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.filters-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #676f9d;
+}
+
+.clear-filters {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.clear-filters:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* =================================
+   RESULTADOS DA BUSCA
+   ================================= */
+.search-results-info {
+    grid-column: 1 / -1;
+    background: #f3f4f6;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-results-info strong {
+    color: #2d3250;
+}
+
+/* =================================
+   GRID DE EPISÓDIOS
+   ================================= */
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* =================================
+   COMPONENTE EPISODE CARD
+   ================================= */
+.episode-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+.episode-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #676f9d;
+}
+
+.episode-card-category {
+    margin-bottom: 12px;
+}
+
+.category-badge {
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.episode-card-title {
+    margin-bottom: 10px;
+}
+
+.episode-card-title a {
+    color: #2d3250;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    display: block;
+}
+
+.episode-card-title a:hover {
+    color: #676f9d;
+}
+
+.episode-card-description {
+    color: #6b7280;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.episode-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.episode-card-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    background: #f3f4f6;
+    color: #6b7280;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.tag-item:hover {
+    background: #676f9d;
+    color: white;
+}
+
+/* =================================
+   ESTADO VAZIO
+   ================================= */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    color: #2d3250;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+/* =================================
+   SIDEBAR
+   ================================= */
+.episodes-sidebar {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+/* =================================
+   PAGINAÇÃO
+   ================================= */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination-wrapper nav {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* =================================
+   CORES DAS CATEGORIAS
+   ================================= */
+.category-1 { background-color: #3b82f6 !important; } /* Frontend - Azul */
+.category-2 { background-color: #ef4444 !important; } /* Backend - Vermelho */
+.category-3 { background-color: #10b981 !important; } /* DevOps - Verde */
+.category-4 { background-color: #8b5cf6 !important; } /* Mobile - Roxo */
+.category-5 { background-color: #f59e0b !important; } /* Carreira - Amarelo */
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+@media (max-width: 768px) {
+    .episodes-container {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .search-input-group {
+        max-width: 100%;
+    }
+    
+    .filters-row {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .filter-select {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .episodes-sidebar {
+        position: static;
+    }
+    
+    .episode-card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
