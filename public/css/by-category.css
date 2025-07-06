@@ -1,0 +1,130 @@
+/* =================================
+   BY CATEGORY PAGE STYLES
+   ================================= */
+
+.category-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 30px 0 40px;
+}
+
+.category-badge-large {
+    display: inline-block;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    color: #2d3250;
+    margin-bottom: 15px;
+}
+
+.category-description {
+    color: #6b7280;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.category-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-stats .stat-item {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.episodes-main-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+}
+
+.active-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.filter-tag {
+    background: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.remove-filter {
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: sticky;
+    top: 120px;
+}
+
+.category-info .category-full-description {
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.category-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+}
+
+.category-meta .meta-item strong {
+    display: block;
+    color: #2d3250;
+    font-size: 1.2rem;
+}
+
+.category-meta .meta-item span {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+@media (max-width: 768px) {
+    .episodes-main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-sidebar {
+        position: static;
+    }
+    
+    .category-title {
+        font-size: 2rem;
+    }
+}
