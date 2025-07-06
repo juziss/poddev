@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5, h6, .logo-title {
   font-weight: 500;
 }
 
+/* =================================
+   NAVBAR STYLES - RESPONSIVA
+   ================================= */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -30,23 +34,56 @@ h1, h2, h3, h4, h5, h6, .logo-title {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    min-height: 70px;
 }
 
 .nav-left {
     display: flex;
     align-items: center;
     gap: 40px;
+    flex: 1;
 }
 
-.nav-links a {
-    position: relative;
-    text-decoration: none;
-    padding: 8px 0;
-    transition: all 0.3s ease;
-    font-weight: 500;
+.logo-link {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    flex-shrink: 0;
 }
 
-.nav-links a::after {
+.logo {
+  height: 40px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400; 
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links li a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -58,24 +95,37 @@ h1, h2, h3, h4, h5, h6, .logo-title {
     transform: translateX(-50%);
 }
 
-.nav-links a:hover::after {
+.nav-links li a:hover::after {
     width: 100%;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     color: #f8b179 !important;
     transform: translateY(-2px); 
 }
 
-.nav-links a {
-    border-radius: 6px;
-    transition: all 0.3s ease;
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
 }
 
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+/* Mobile menu button */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background: rgba(248, 177, 121, 0.2);
 }
 
 .navbar a,
@@ -89,86 +139,276 @@ h1, h2, h3, h4, h5, h6, .logo-title {
     color: white !important;
 }
 
-.logo {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.logo-title {
-  font-size: 1.5rem;
-  margin-right: 20px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 400; 
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #f8b179; 
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* =================================
+   SEARCH BOX STYLES
+   ================================= */
 
 .search-box {
-  position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .search-box input {
-  width: 220px;
-  padding: 8px 30px 8px 10px;
-  border-radius: 20px;
-  border: 1px solid #fff; 
-  background-color: transparent;
-  color: #fff;
+    width: 220px;
+    padding: 8px 40px 8px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #f8b179;
+    width: 250px;
 }
 
 .search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #f8b179;
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon:hover {
+    background-color: rgba(248, 177, 121, 0.2);
 }
 
 .search-icon img {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
 }
 
-button {
-  padding: 8px 12px;
-  border: none;
-  background-color: #676f9d;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
+/* Novo estilo para o botão Spotify */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-button:hover {
-  background-color: #f8b179;
-  color: #2d3250;
-  font-weight: 500;
+.btn-spotify {
+    background: #1db954;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.btn-spotify:hover {
+    background: #1ed760;
+    transform: translateY(-1px);
+    color: white !important;
 }
 
 /* =================================
-   FOOTER STYLES - Versão Simplificada
+   RESPONSIVE BREAKPOINTS
+   ================================= */
+
+/* Tablet (768px and down) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+        flex-wrap: wrap;
+        min-height: 60px;
+    }
+    
+    .nav-left {
+        gap: 20px;
+        flex: 1;
+    }
+    
+    .logo-title {
+        font-size: 1.3rem;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(45, 50, 80, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li a {
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        order: 1;
+    }
+    
+    .nav-right {
+        order: 2;
+        gap: 10px;
+    }
+    
+    .search-box input {
+        width: 180px;
+    }
+    
+    .search-box input:focus {
+        width: 200px;
+    }
+    
+    .btn-spotify {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* Mobile Small (480px and down) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+        min-height: 55px;
+    }
+    
+    .nav-left {
+        gap: 10px;
+    }
+    
+    .logo {
+        height: 32px;
+        margin-right: 8px;
+    }
+    
+    .logo-title {
+        font-size: 1.1rem;
+    }
+    
+    .nav-right {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+    }
+    
+    .search-box {
+        order: 2;
+    }
+    
+    .search-box input {
+        width: 140px;
+        font-size: 13px;
+        padding: 6px 35px 6px 8px;
+    }
+    
+    .search-box input:focus {
+        width: 160px;
+    }
+    
+    .nav-actions {
+        order: 1;
+    }
+    
+    .btn-spotify {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+    
+    .mobile-menu-toggle {
+        font-size: 1.3rem;
+        padding: 6px;
+    }
+}
+
+/* Mobile Extra Small (360px and down) */
+@media (max-width: 360px) {
+    .navbar {
+        min-height: 50px;
+        padding: 0 8px;
+    }
+    
+    .logo {
+        height: 28px;
+        margin-right: 6px;
+    }
+    
+    .logo-title {
+        font-size: 1rem;
+    }
+    
+    .search-box input {
+        width: 120px;
+    }
+    
+    .search-box input:focus {
+        width: 140px;
+    }
+    
+    .btn-spotify {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}
+
+/* =================================
+   LAYOUT ADJUSTMENTS FOR MOBILE
+   ================================= */
+
+/* Ajustar margem top do conteúdo quando navbar for menor */
+@media (max-width: 768px) {
+    .episodes-container,
+    .about-container,
+    .contact-container,
+    .episode-show-container {
+        margin-top: 70px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .episodes-container,
+    .about-container,
+    .contact-container,
+    .episode-show-container {
+        margin-top: 65px !important;
+    }
+    
+    .home-container .banner-section {
+        margin-top: -65px !important;
+        padding-top: 65px !important;
+    }
+}
+
+/* =================================
+   FOOTER STYLES - Mantendo original
    ================================= */
 
 .main-footer {
@@ -212,12 +452,13 @@ button:hover {
     font-weight: 600;
 }
 
-/* Responsivo */
+/* Footer responsive */
 @media (max-width: 768px) {
     .footer-bottom-content {
         flex-direction: column;
         text-align: center;
         gap: 10px;
+        padding: 0 15px;
     }
     
     .footer-copyright,
@@ -232,6 +473,6 @@ button:hover {
     }
     
     .footer-bottom-content {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 }
