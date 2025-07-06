@@ -1,5 +1,6 @@
 # 🎧 PODDEV
 
+![PODDEV - Página Inicial](https://github.com/user-attachments/assets/efee0346-94c3-40e8-863d-0b728067f269)
 Uma plataforma de podcast para desenvolvedores construída com Laravel. 
 
 > **⚠️ Aviso:** O foco foi o backend, então o frontend era só para ter uma interface funcional.
